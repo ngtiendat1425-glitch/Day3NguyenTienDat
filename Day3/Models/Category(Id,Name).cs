@@ -9,8 +9,8 @@ namespace Day3.Models
 
         [Required(ErrorMessage = "Name is required")]
         [StringLength(100, ErrorMessage = "Name cannot be longer than 100 characters")]
-        public string Name { get; set; } = string.Empty;
+        public string? Name { get; set; } = string.Empty;
 
-        public List<Product> products { get; set; }
-    }
+        public ICollection<Product> products { get; set; }
+    } 
 }
